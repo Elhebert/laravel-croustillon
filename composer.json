@@ -1,6 +1,6 @@
 {
     "name": "elhebert/laravel-croustillon",
-    "description": "Set of Laravel helper that simplify tracking handling",
+    "description": "A package to help you manage your cookie banner and cookie policy with ease",
     "keywords": [
         "Laravel",
         "cookie",
