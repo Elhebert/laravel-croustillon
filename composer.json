@@ -1,0 +1,48 @@
+{
+    "name": "elhebert/laravel-croustillon",
+    "description": "Set of Laravel helper that simplify tracking handling",
+    "keywords": [
+        "Laravel",
+        "cookie",
+        "GDPR",
+        "croustillon"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dieter Stinglhamber",
+            "email": "elhebert@hotmail.be"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "5.7.*",
+        "illuminate/http": "5.7.*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elhebert\\Croustillon\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "cs-fix": [
+            "./vendor/bin/php-cs-fixer fix --allow-risky yes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elhebert\\Croustillon\\CroustillonServiceProvider"
+            ]
+        },
+        "aliases": {
+            "Croustillon": "Elhebert\\Croustillon\\Facades\\Croustillon"
+        }
+    }
+}
