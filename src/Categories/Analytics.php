@@ -14,6 +14,6 @@ class Analytics extends CookieCategory
 
     public function name(): string
     {
-        return trans('croustillon::cookies.categories.analytics.name');
+        return trans('croustillon::cookies.categories.analytics');
     }
 }

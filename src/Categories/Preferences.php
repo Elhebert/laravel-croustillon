@@ -2,7 +2,6 @@
 
 namespace Elhebert\Croustillon\Categories;
 
-
 class Preferences extends CookieCategory
 {
     /** @var int */
@@ -15,6 +14,6 @@ class Preferences extends CookieCategory
 
     public function name(): string
     {
-        return trans('croustillon::cookies.categories.preferences.name');
+        return trans('croustillon::cookies.categories.preferences');
     }
 }

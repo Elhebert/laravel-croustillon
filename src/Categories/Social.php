@@ -14,6 +14,6 @@ class Social extends CookieCategory
 
     public function name(): string
     {
-        return trans('croustillon::cookies.categories.social.name');
+        return trans('croustillon::cookies.categories.social');
     }
 }

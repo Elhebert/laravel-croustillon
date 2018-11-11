@@ -2,7 +2,6 @@
 
 namespace Elhebert\Croustillon\Categories;
 
-
 class Retargetting extends CookieCategory
 {
     /** @var int */
@@ -15,6 +14,6 @@ class Retargetting extends CookieCategory
 
     public function name(): string
     {
-        return trans('croustillon::cookies.categories.retargetting.name');
+        return trans('croustillon::cookies.categories.retargetting');
     }
 }

@@ -10,7 +10,7 @@ use Elhebert\Croustillon\Cookies\CookiePolicy;
 
 class CookiesController
 {
-    public function store(Request $request): RedirectResponse
+    public function __invoke(Request $request): RedirectResponse
     {
         $selectedCookiePolicy = collect($request->input('cookie-choice'))
             ->reduce(function ($carry, $item) {

@@ -1,1 +1,1 @@
-{!! trans('croustillon::cookies.categories.social.description') !!}
+@include("croustillon::lang.{$locale}.cookies.social")

@@ -2,6 +2,7 @@
 
 namespace Elhebert\Croustillon;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,6 +20,8 @@ class CroustillonServiceProvider extends ServiceProvider
 
         $this->registerPublishing();
         $this->registerRoutes();
+
+        $this->registerViewComposer();
 
         $this->app->bind(Croustillon::class, function () {
             $Croustillon = new Croustillon();
@@ -61,5 +64,14 @@ class CroustillonServiceProvider extends ServiceProvider
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
             });
+    }
+
+    private function registerViewComposer()
+    {
+        View::composer([
+            'croustillon::_partials.categories.*',
+        ], function ($view) {
+            $view->with('locale', app()->getLocale());
+        });
     }
 }

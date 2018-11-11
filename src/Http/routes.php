@@ -1,3 +1,3 @@
 <?php
 
-Route::post('/', 'CookiesController@store')->name('croustillon.cookies.store');
+Route::post('/', 'CookiesController')->name('croustillon.cookies.store');

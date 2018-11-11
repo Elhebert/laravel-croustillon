@@ -39,7 +39,7 @@ You can add a cookie banner to all responses of your app by registering `Elheber
 protected $middlewareGroups = [
    'web' => [
        ...
-       \Elhebert\Croustillon\Http\Middlewares\AddCookieBanner::class::class,
+       \Elhebert\Croustillon\Http\Middlewares\AddCookieBanner::class,
    ],
 ```
 
@@ -48,7 +48,7 @@ Alternatively you can apply the middleware on the route or route group level.
 ```php
 // in a routes file
 
-Route::get('my-page', 'MyController')->middleware(Elhebert\Croustillon\Http\Middlewares\AddCookieBanner::class::class);
+Route::get('my-page', 'MyController')->middleware(Elhebert\Croustillon\Http\Middlewares\AddCookieBanner::class);
 ```
 
 ## Usage
