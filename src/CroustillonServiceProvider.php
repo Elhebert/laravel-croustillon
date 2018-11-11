@@ -71,6 +71,7 @@ class CroustillonServiceProvider extends ServiceProvider
         View::composer([
             'croustillon::_partials.categories.*',
             'croustillon::banner',
+            'croustillon::policy',
         ], function ($view) {
             $view->with('locale', app()->getLocale());
         });
