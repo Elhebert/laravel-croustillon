@@ -1,9 +1,7 @@
 <section>
     <h2>{{ trans('croustillon::cookies.banner.title') }}</h2>
 
-    @foreach (trans('croustillon::cookies.banner.text') as $text)
-        <p>{!! $text !!}</p>
-    @endforeach
+    @include("lang.{$locale}.banner.content")
 
     <form action="{{ route('croustillon.cookies.store') }}" method="post">
         @csrf
@@ -11,6 +9,7 @@
         <fieldset>
                 @foreach (croustillon()->cookiesByCategory()->keys() as $category)
                     <label for="{{ class_basename($category) }}">
+                        <span>{{ croustillon()->category($category)->name() }}</span>
                         <input
                             type="checkbox"
                             name="cookie-policies[]"
