@@ -91,10 +91,6 @@ class Croustillon
         return preg_match("/{$regexp}$/im", $acceptedCookies) === 1;
     }
 
-    public function routes()
-    {
-    }
-
     private function getCategoriesFromConfig(): Collection
     {
         $classes = config('croustillon.types');
