@@ -17,7 +17,7 @@ class CookiePolicy extends Cookie
 
     public function name(): string
     {
-        return config('croustillon.cookie_policy');
+        return config('croustillon.policy_cookie');
     }
 
     public function purpose(): string
