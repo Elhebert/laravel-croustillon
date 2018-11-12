@@ -24,6 +24,6 @@ class Session extends Cookie
 
     public function purpose(): string
     {
-        return __('croustillon::cookies.purposes.security');
+        return trans('croustillon::cookies.purposes.security');
     }
 }

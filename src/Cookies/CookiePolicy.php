@@ -22,6 +22,6 @@ class CookiePolicy extends Cookie
 
     public function purpose(): string
     {
-        return __('croustillon::cookies.purposes.cookie-preferences');
+        return trans('croustillon::cookies.purposes.cookie-preferences');
     }
 }
