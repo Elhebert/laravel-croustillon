@@ -58,12 +58,14 @@ class CroustillonServiceProvider extends ServiceProvider
 
     private function registerRoutes()
     {
-        Route::prefix(config('croustillon.path'))
-            ->namespace('Elhebert\Croustillon\Http\Controllers')
-            ->middleware('croustillon')
-            ->group(function () {
-                $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
-            });
+        if (config('croustillon.enable_routes')) {
+            Route::prefix(config('croustillon.path'))
+                ->namespace('Elhebert\Croustillon\Http\Controllers')
+                ->middleware('croustillon')
+                ->group(function () {
+                    $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
+                });
+        }
     }
 
     private function registerViewComposer()

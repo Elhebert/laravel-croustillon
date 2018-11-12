@@ -6,6 +6,7 @@ return [
     'policy_cookie' => env('CROUSTILLON_COOKIE_POLICY', 'cookie_policy'),
 
     'path' => '/croustillon',
+    'enable_routes' => env('CROUSTILLON_ENABLE_ROUTES', true),
 
     'middleware' => ['web'],
 
