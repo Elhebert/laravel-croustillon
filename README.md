@@ -4,6 +4,18 @@ A package to help you manage your cookie banner and cookie policy with ease.
 
 > Documentation is still a work in progress.
 
+## Why `laravel-croustillon`?
+
+I'm glad you asked. During the develoment of this packages I used `Cookie` to namespace everything which quickly made it hard to dicerne the Laravel Cookie classes and the Cookie from my package.
+
+I start thinking about names to use and thought of names like Donuts, Cake, Waffle or Biscuit. I discussed this with a colleague ([@meduzen](https://github.com/meduzen)) and I joked about using `Croustillon` because it would make everything awesome.
+
+Croustillon is a (french) Belgian word. For the non belgian people out here, Google Translate tells me it's called a donut in english, but I'm sceptical.
+
+So here's a picture:
+
+![croustillon](http://www.lesfoodies.com/_recipeimage/98339/beignet-croustillon.jpg)
+
 ## Disclaimer
 
 I'm not a lawyer, so everything here should be taken with a grain of salt, especially the legal documents.
