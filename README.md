@@ -162,9 +162,41 @@ The banner will be in `resources/views/vendor/croustillon/banner.blade.php`. By 
 
 It also comes bundle with a controller and a route, so you don't need to worry about creating them in your application.
 
+The default route is `/croustillon`.
+
 #### Cookie legal page
 
 The legal page can be found in `resources/views/vendor/croustillon/policy.blade.php`. The main content of that page is already done, but you still should update it to suit your need and your website.
+
+The default route for this page is `/croustillon/policy`.
+
+## Customization
+
+This package come with opinions. Like routes, copy and views.
+
+Everything can be customize.
+
+### Routes
+
+The prefix can be customize in the config file but should you need complete control on the routes you can disable the ones from this package to create your own.
+
+The routes you need to create are:
+
+- For the cookie banner form:
+    - Verb: `POST`
+    - Action: `\Elhebert\Croustillon\Http\Controllers\CookiesController` (it has an `__invoke` method, so you don't need to reference a method).
+
+- For the cookie policy legal page:
+    - Verb: `GET`
+    - Action: `\Elhebert\Croustillon\Http\Controllers\CookiePolicyController` (it has an `__invoke` method, so you don't need to reference a method).
+
+### Translations
+
+You can overwrite the default translations by publishing the language files.
+
+### Views
+
+You can overwrite the default views by publishing the view files.
 
 ## Contributing
 
