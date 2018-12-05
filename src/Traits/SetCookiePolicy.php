@@ -13,9 +13,14 @@ trait SetCookiePolicy
     public function setCookie(Request $request): RedirectResponse
     {
         $selectedCookiePolicy = collect($request->input('cookie-choice'))
-            ->reduce(function ($carry, $item) {
-                return $carry + $item;
-            });
+            ->reject(function ($choice) {
+                return Croustillon::mandatoryCategories()
+                    ->map(function ($category) {
+                        return $category->value();
+                    })
+                    ->contains($choice);
+            })
+            ->sum();
 
         $cookiePolicy = Croustillon::minimumCookiePolicy() + $selectedCookiePolicy;
         $cookiePolicyCookie = Croustillon::cookies()[Croustillon::cookies()->search(function ($item) {
