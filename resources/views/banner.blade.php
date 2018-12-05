@@ -1,7 +1,7 @@
 <section>
     <h2>{{ trans('croustillon::cookies.banner.title') }}</h2>
 
-    @include("lang.{$locale}.banner.content")
+    @include("croustillon::lang.{$locale}.banner.content")
 
     <form action="{{ route('croustillon.cookies.store') }}" method="post">
         @csrf
